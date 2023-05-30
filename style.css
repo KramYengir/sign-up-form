@@ -18,9 +18,19 @@ body{
 .image-side{
     display: flex;
     flex: 1;
+    align-items: flex-start;
+    padding-top: 20vh;
     background-image: url(img/peak-district.jpg);
     background-size: cover;
     background-position: center;
+    border: var(--guide-border);
+}
+
+.logo{
+    flex: 1;
+    height: min(200px, 15vh);
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.2);
     border: var(--guide-border);
 }
 
