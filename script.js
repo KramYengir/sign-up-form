@@ -1,11 +1,28 @@
 const phoneInput = document.querySelector('#phone');
 
-phoneInput.addEventListener('invalid', (e) =>{
-    if(e.target.validity.patternMismatch){
-        e.target.setCustomValidity("Please enter a number bwteen 7 and 12 digits long")
-    }
+phoneInput.addEventListener('keyup', (e) =>{
+  if(!e.target.validity.patternMismatch){
+    e.target.setCustomValidity('');
+  }
+  else{
+    e.target.setCustomValidity('Please Enter a Number Between 7 - 12 Digits Long!');
+  }
+
+  updateInvalidStatus(e.target);
 })
 
-phoneInput.addEventListener('change', (e) =>{
+/* phoneInput.addEventListener('change', (e) =>{
     e.target.setCustomValidity('');
-})
+    changeInvalidStatus(e.target);
+}) */
+
+const updateInvalidStatus = (input) =>{
+    if(!input.validity.valid){
+        input.classList.add('invalid');
+        console.log('invalid')
+    }
+    else{
+        input.classList.remove('invalid');
+        console.log('Valid')
+    }
+}

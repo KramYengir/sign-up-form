@@ -137,6 +137,10 @@ input:focus{
     transition: 0.4s;
 }
 
+input.invalid{
+    border: 1px solid red;
+}
+
 button{
     margin-top: 2rem;
     margin-left: 5%;
