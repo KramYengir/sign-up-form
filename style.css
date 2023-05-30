@@ -113,13 +113,28 @@ body{
 label{
     text-transform: uppercase;
     font-size: min(1rem, 2vh);
+    font-weight: bold;
     color: rgb(99, 99, 99);
 }
 
 input{
     width: min(600ch, 20vw);
     height: min(2rem, 5vh);
+    border: 1px solid lightblue;
+    border-radius: 5px;
 }
+
+input::placeholder{
+    padding-left: 2%;
+    font-size: large;
+    opacity: 0.8;
+}
+
+/* input[placeholder]{
+    font-size: large;
+    opacity: 0.5;
+} */
+
 button{
     margin-top: 2rem;
     margin-left: 5%;
