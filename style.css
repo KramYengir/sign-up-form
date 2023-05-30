@@ -1,17 +1,24 @@
 :root{
     --guide-border: 1px solid blue;
+    --body-background-color: rgb(255, 255, 255);
+    --form-background-color: white;
 }
 
 body{
     min-height: 100vh;
+    font-family:'Franklin Gothic Medium', 
+                'Arial Narrow', Arial, sans-serif;
+    font-size: min(1.5rem, 20vh);
+    font-weight: 400;
     display: flex;
     flex-direction: column;
+    background-color: var(--body-background-color);
 }
 
 .container{
     display: flex;
     flex: 1;
-    padding: min(20px, 1vw);
+    padding: min(30px, 2vw);
     border: var(--guide-border);
 }
 
@@ -53,12 +60,20 @@ body{
     flex-direction: column;
     flex: 1.3;
     border-radius: 10px;
+    background-color: var(--form-background-color);
     border: var(--guide-border);
 }
 
 .form-header{
     flex: 0.6;
+    max-width: 80%;
+    align-self: flex-start;
+    padding-left: 5%;
     border: var(--guide-border);
+}
+
+.form-header p{
+    padding-top: 10%;
 }
 
 .form-input{
