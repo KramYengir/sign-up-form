@@ -1,15 +1,16 @@
 :root{
-    --guide-border: 1px solid blue;
+    --guide-border: 1px solid rgb(255, 255, 255, 0.0);
     --body-background-color: rgb(255, 255, 255);
     --form-background-color: white;
     --form-input-background-color: rgb(228, 238, 255);
+    --button-color: rgb(58, 110, 51);
 }
 
 body{
     min-height: 100vh;
     font-family:'Franklin Gothic Medium', 
                 'Arial Narrow', Arial, sans-serif;
-    font-size: min(1.4rem, 4vh);
+    font-size: min(1.3rem, 4vh);
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -83,6 +84,40 @@ body{
     background-color: var(--form-input-background-color);
     border: var(--guide-border);
 }
+
+.name-input, .contact-info-input, .password-input{
+    display: flex;
+    justify-content: start;
+    gap: min(50px, 10vw);
+    margin-bottom: min(1.5rem, 10vh);
+}
+
+.name, .contact, .password{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    text-transform: uppercase;
+    font-size: min(1rem, 2vh);
+    color: rgb(99, 99, 99);
+}
+
+input{
+    width: min(600ch, 20vw);
+    height: min(2rem, 5vh);
+}
+button{
+    margin-top: 2rem;
+    margin-left: 5%;
+    width: min(300px, 20vw);
+    height: min(50px, 10vh);
+    border-radius: 10px;
+    font-size: min(1rem, 2vh);
+    font-weight: 800;
+    color: white;
+    background-color: var(--button-color);
+}
+
 
 .form-footer{
     flex: 0.8;
