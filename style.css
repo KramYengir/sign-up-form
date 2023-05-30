@@ -67,7 +67,6 @@ body{
 .photo-credit p{
     margin-bottom: 2px;
     padding: 2px 10px;
-    /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .form-side{
@@ -84,11 +83,13 @@ body{
     max-width: 80%;
     align-self: flex-start;
     padding-left: 5%;
+    margin-bottom: 50px;
     border: var(--guide-border);
 }
 
 .form-header p{
     padding-top: 5%;
+    font-weight: bold;
 }
 
 .form-input{
