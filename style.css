@@ -130,11 +130,6 @@ input::placeholder{
     opacity: 0.8;
 }
 
-/* input[placeholder]{
-    font-size: large;
-    opacity: 0.5;
-} */
-
 button{
     margin-top: 2rem;
     margin-left: 5%;
