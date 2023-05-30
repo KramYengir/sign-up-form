@@ -11,9 +11,8 @@ body{
 .container{
     display: flex;
     flex: 1;
-    padding: max(10px, 2vw);
+    padding: min(20px, 1vw);
     border: var(--guide-border);
-    gap: max(10px, 2vw);
 }
 
 .image-side{
@@ -25,7 +24,7 @@ body{
 .form-side{
     display: flex;
     flex-direction: column;
-    flex: 1.2;
+    flex: 1.3;
     border: var(--guide-border);
 }
 
