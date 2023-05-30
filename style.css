@@ -2,13 +2,14 @@
     --guide-border: 1px solid blue;
     --body-background-color: rgb(255, 255, 255);
     --form-background-color: white;
+    --form-input-background-color: rgb(228, 238, 255);
 }
 
 body{
     min-height: 100vh;
     font-family:'Franklin Gothic Medium', 
                 'Arial Narrow', Arial, sans-serif;
-    font-size: min(1.5rem, 20vh);
+    font-size: min(1.4rem, 4vh);
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -73,10 +74,16 @@ body{
 }
 
 .form-header p{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .form-input{
     flex: 1.4;
+    padding-left: 5%;
+    background-color: var(--form-input-background-color);
     border: var(--guide-border);
+}
+
+.form-footer{
+    flex: 0.8;
 }
