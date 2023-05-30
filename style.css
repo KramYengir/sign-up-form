@@ -120,5 +120,9 @@ button{
 
 
 .form-footer{
+    display: flex;
     flex: 0.8;
+    align-items: flex-end;
+    font-size: smaller;
+    padding-left: 5%;
 }
