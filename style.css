@@ -18,6 +18,9 @@ body{
 .image-side{
     display: flex;
     flex: 1;
+    background-image: url(img/peak-district.jpg);
+    background-size: cover;
+    background-position: center;
     border: var(--guide-border);
 }
 
