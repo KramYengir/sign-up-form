@@ -1,0 +1,40 @@
+:root{
+    --guide-border: 1px solid blue;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+    padding: max(10px, 2vw);
+    border: var(--guide-border);
+    gap: max(10px, 2vw);
+}
+
+.image-side{
+    display: flex;
+    flex: 1;
+    border: var(--guide-border);
+}
+
+.form-side{
+    display: flex;
+    flex-direction: column;
+    flex: 1.2;
+    border: var(--guide-border);
+}
+
+.form-header{
+    flex: 0.6;
+    border: var(--guide-border);
+}
+
+.form-input{
+    flex: 1.4;
+    border: var(--guide-border);
+}
