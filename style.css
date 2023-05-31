@@ -132,12 +132,16 @@ input::placeholder{
 }
 
 input:focus{
+    outline: none;
+    border: 1px solid green;
     transform: scale(1.05);
     box-shadow: 8px 5px 10px rgb(189, 189, 189);
     transition: 0.4s;
 }
 
-input.invalid{
+input.invalid,
+input.invalid:focus{
+    outline: none;
     border: 1px solid red;
 }
 

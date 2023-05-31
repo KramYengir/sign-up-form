@@ -1,5 +1,26 @@
 const phoneInput = document.querySelector('#phone');
 
+
+/*
+create an array for the input elements,
+iterate thru it, adding listeners,
+on keyup, determine validity and
+add/remove invalid class accordingly
+*/
+
+const inputElements = [...document.querySelectorAll('input')];
+
+inputElements.forEach(input =>{
+  input.addEventListener('keyup', (e) =>{
+    updateInvalidStatus(e.target);
+  })
+
+  input.addEventListener('focus', (e) =>{
+    updateInvalidStatus(e.target);
+  })
+})
+
+
 phoneInput.addEventListener('keyup', (e) =>{
   if(!e.target.validity.patternMismatch){
     e.target.setCustomValidity('');
@@ -11,10 +32,6 @@ phoneInput.addEventListener('keyup', (e) =>{
   updateInvalidStatus(e.target);
 })
 
-/* phoneInput.addEventListener('change', (e) =>{
-    e.target.setCustomValidity('');
-    changeInvalidStatus(e.target);
-}) */
 
 const updateInvalidStatus = (input) =>{
     if(!input.validity.valid){
