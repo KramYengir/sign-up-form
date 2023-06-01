@@ -83,7 +83,7 @@ body{
     max-width: 80%;
     align-self: flex-start;
     padding-left: 5%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border: var(--guide-border);
 }
 
@@ -165,6 +165,11 @@ button{
     font-weight: 800;
     color: white;
     background-color: var(--button-color);
+}
+
+.login-text{
+    margin-left: 5%;
+    font-size: min(1rem, 2vh);
 }
 
 
