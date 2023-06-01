@@ -65,7 +65,10 @@ const determineErrorMsg = (input) =>{
     displayErrorMsg('-Please enter a valid email  ', input)
   }
   else if(input.id.includes('phone')){
-    displayErrorMsg('-Please enter a nmber between 7 - 12 digits',input)
+    displayErrorMsg('-Please enter a number between 7 - 12 digits',input)
+  }
+  else if(!input.id.includes('confirm')){
+    displayErrorMsg("- Password must be at least 8 characters\n long and contain at least:\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 number", input);
   }
 }
 

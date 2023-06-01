@@ -145,13 +145,14 @@ input.invalid:focus{
     border: 1px solid red;
 }
 
-.inputErrorMsg{
-    font-size: max(0.9rem, 1vh);
-    font-style: italic;
+.inputErrorMsg,
+.confirmPassworderrorMsg{
+    font-size: max(0.8rem, 1vh);
     text-transform: uppercase;
     color: brown;
     padding-left: 1%;
     margin-top: 1%;
+    white-space: pre-wrap;
 }
 
 button{

@@ -65,13 +65,13 @@
                         <div class="password-input">
                             <div class="password1-input password">
                                 <label for="password">Password*</label>
-                                <input type="password" id="password" name="password" placeholder="*******" required>
+                                <input type="password" id="password" name="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$" placeholder="*******" required>
                                 <div class="inputErrorMsg"></div>
                             </div>
                             <div class="password2-input password">
                                 <label for="password-confirm">Confirm Password*</label>
-                                <input type="password" id="password-confirm" name="password-confirm" placeholder="*******"  required>
-                                <div class="inputErrorMsg"></div>
+                                <input type="password" id="password-confirm" name="password-confirm" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])" placeholder="*******"  required>
+                                <div class="confirmPasswordErrorMsg"></div>
                             </div>
                         </div>
                     </form>
