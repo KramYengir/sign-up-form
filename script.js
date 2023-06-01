@@ -20,20 +20,24 @@ inputElements.forEach(input =>{
   })
 })
 
+
 /* For the phone number field,
 we provide a more useful error msg for
 when the number is too short/long 
  */
-phoneInput.addEventListener('keyup', (e) =>{
+/* phoneInput.addEventListener('keyup', (e) =>{
+
+  e.target.setCustomValidity('');
+
   if(!e.target.validity.patternMismatch){
-    e.target.setCustomValidity('');
+    displayErrorMsg('', e.target)
   }
   else{
-    e.target.setCustomValidity('Please Enter a Number Between 7 - 12 Digits Long!');
+    displayErrorMsg('Please Enter a Number Between 7 - 12 Digits Long!', e.target);
   }
 
   updateInvalidStatus(e.target);
-})
+}) */
 
 /* A function that checks if the provided 
 input element is valid or not, then adding/
@@ -42,12 +46,24 @@ removing the 'invalid' class accordingly
 const updateInvalidStatus = (input) =>{
     if(!input.validity.valid){
         input.classList.add('invalid');
-        console.log('invalid')
+        determineErrorMsg(input);
     }
     else{
         input.classList.remove('invalid');
-        console.log('Valid')
+        displayErrorMsg('', input)
     }
+}
+
+const determineErrorMsg = (input) =>{
+  if(input.id.includes('name')){
+    displayErrorMsg('Please enter you name...', input)
+  }
+  else if(input.id.includes('email')){
+    displayErrorMsg('Please enter a valid email...', input)
+  }
+  else if(input.id.includes('phone')){
+    displayErrorMsg('Please Enter a Number Between 7 - 12 Digits Long!',input)
+  }
 }
 
 /* A simple function that adds text to a div
