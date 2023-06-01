@@ -37,7 +37,7 @@
             </div>
             <div class="form-input">
                 <h4><em>Lets get to it!</em></h2>
-                    <form id="form" action="somwhere" method="post">
+                    <form id="form" action="" method="post">
                         <div class="name-input">
                             <div class="firstname-input name">
                                 <label for="firstname">First Name*</label>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="password2-input password">
                                 <label for="password-confirm">Confirm Password*</label>
-                                <input type="password" id="password-confirm" name="password-confirm" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])" placeholder="*******"  required>
+                                <input type="password" id="password-confirm" name="password-confirm" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$"placeholder="*******"  required>
                                 <div class="confirmPasswordErrorMsg"></div>
                             </div>
                         </div>

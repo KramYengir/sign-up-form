@@ -1,4 +1,6 @@
-const phoneInput = document.querySelector('#phone');
+//password inputs
+const passwordA = document.querySelector('#password');
+const passwordB = document.querySelector('#password-confirm');
 
 /*
 create an array for the input elements
@@ -23,24 +25,38 @@ inputElements.forEach(input =>{
   })
 })
 
+/* Here we sort out the password matching aspect.
+*/
 
-/* For the phone number field,
-we provide a more useful error msg for
-when the number is too short/long 
- */
-/* phoneInput.addEventListener('keyup', (e) =>{
+/* First we disable the second password input until
+the first one is valid
+*/
 
-  e.target.setCustomValidity('');
+passwordA.addEventListener('focus', (e)=>{
+  passwordB.disabled = !passwordA.validity.valid; 
+})
 
-  if(!e.target.validity.patternMismatch){
-    displayErrorMsg('', e.target)
+passwordA.addEventListener('keyup', (e)=>{
+  passwordB.disabled = !passwordA.validity.valid; 
+})
+
+//Then check is the passwords match
+
+const checkPasswordMatch = () =>{
+  if(passwordA.value == passwordB.value){
+    passwordB.classList.remove('invalid');
+    passwordB.setCustomValidity('');
+    displayErrorMsg('', passwordB)
   }
   else{
-    displayErrorMsg('Please Enter a Number Between 7 - 12 Digits Long!', e.target);
+    passwordB.classList.add('invalid');
+    passwordB.setCustomValidity('Passwords must match!');
+    displayErrorMsg('-Passwords must match!', passwordB)
   }
+}
 
-  updateInvalidStatus(e.target);
-}) */
+passwordB.addEventListener('keyup', checkPasswordMatch);
+
 
 /* A function that checks if the provided 
 input element is valid or not, then adding/
@@ -68,7 +84,7 @@ const determineErrorMsg = (input) =>{
     displayErrorMsg('-Please enter a number between 7 - 12 digits',input)
   }
   else if(!input.id.includes('confirm')){
-    displayErrorMsg("- Password must be at least 8 characters\n long and contain at least:\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 number", input);
+    displayErrorMsg("- Password must be at least 8 characters long\n and contain at least:\n- 1 uppercase letter\n- 1 lowercase letter\n- 1 number", input);
   }
 }
 

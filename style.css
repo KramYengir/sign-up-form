@@ -146,7 +146,7 @@ input.invalid:focus{
 }
 
 .inputErrorMsg,
-.confirmPassworderrorMsg{
+.confirmPasswordErrorMsg{
     font-size: max(0.8rem, 1vh);
     text-transform: uppercase;
     color: brown;
