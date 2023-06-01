@@ -145,6 +145,15 @@ input.invalid:focus{
     border: 1px solid red;
 }
 
+.inputErrorMsg{
+    font-size: max(0.9rem, 1vh);
+    font-style: italic;
+    text-transform: uppercase;
+    color: brown;
+    padding-left: 1%;
+    margin-top: 1%;
+}
+
 button{
     margin-top: 2rem;
     margin-left: 5%;

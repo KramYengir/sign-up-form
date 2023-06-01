@@ -11,6 +11,9 @@ updating the invalid/valid class status on
 focus and each key press 
 */
 inputElements.forEach(input =>{
+  //Set the default browser error message to blank
+  
+
   input.addEventListener('keyup', (e) =>{
     updateInvalidStatus(e.target);
   })
@@ -56,13 +59,13 @@ const updateInvalidStatus = (input) =>{
 
 const determineErrorMsg = (input) =>{
   if(input.id.includes('name')){
-    displayErrorMsg('Please enter you name...', input)
+    displayErrorMsg('-Please enter your name', input)
   }
   else if(input.id.includes('email')){
-    displayErrorMsg('Please enter a valid email...', input)
+    displayErrorMsg('-Please enter a valid email  ', input)
   }
   else if(input.id.includes('phone')){
-    displayErrorMsg('Please Enter a Number Between 7 - 12 Digits Long!',input)
+    displayErrorMsg('-Please enter a nmber between 7 - 12 digits',input)
   }
 }
 
